@@ -1,0 +1,71 @@
+body{
+    background: #0e2941;
+}
+
+.edit-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+
+}
+
+.edit-form form{
+    position: relative;
+    background: white;
+    height: 70vh;
+    width: 600px;
+    border-radius: 15px;
+   
+}
+
+.edit-form form input{
+    margin-bottom: 11px;
+    
+}
+
+.sub-btn{
+    position: absolute;
+    left: 280px;
+    margin-top: -7px;
+    border-radius: 7px;
+    padding: 7px;
+    border-color: white;
+    
+}
+
+.fields{
+    margin-left: 10px;
+}
+
+#link{
+    height: 19px;
+    width: 550px;
+    
+}
+
+.sub-btn:hover{
+    opacity: 0.74;
+  
+}
+
+.edit-category{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.update-category-btn{
+    margin-top: 15px;
+    margin-left: 84px;
+    padding: 3px;
+    border-radius: 5px;
+    border-color: rgb(204, 197, 197);
+}
+
+.category-dropdown{
+    margin-left: 13px;
+    margin-top: 9px;
+}

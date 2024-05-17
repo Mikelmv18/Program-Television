@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300);
+
+body{
+  
+  font-family: "Poppins";
+}
+
+.table-form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:200px;
+}
+
+.table-form input{
+    padding: 8px;
+}
+
+.table-form .success{
+    background-color: green;
+    color: white;
+    border-radius: 6px;
+    margin-left: -4px;
+    border-color: gray;
+}
+
+.table table {
+    border: 1px solid black;
+    font-weight: bold;
+   
+}
+table th {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-style:solid;
+    border-radius: 4px;
+}
+
+tr {
+    border-bottom: 1px solid black;
+    border-style:solid;
+    
+}
+
+table td {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-style:solid;
+}
+
+table td:first-child {
+    border-left: none;
+}
+
+table td:last-child {
+    border-right: none;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 77vh;
+   
+}
+
+.table table td{
+    width: 300px;
+   
+    padding-top:17px;
+    padding-bottom: 17px;
+    text-align: center;
+    
+}
+
+.table table th{
+   padding: 8px;
+   text-decoration: dashed;
+}
+
+.table .edit{
+    background-color: rgb(233, 173, 32);
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+    font-weight: bold;
+    transition: opacity 0.4s;
+}
+
+
+.table .delete{
+    background-color: rgb(198, 28, 28);
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+    transition: opacity 0.4s;
+    
+}
+
+
+.table .delete:hover{
+    
+    opacity: 0.83;
+}
+
+.table .edit:hover{
+    
+    opacity: 0.83;
+}

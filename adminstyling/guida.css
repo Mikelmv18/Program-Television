@@ -1,0 +1,175 @@
+body{
+    overflow: scroll;
+    font-family: 'Poppins', monospace;
+}
+.table table{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:170px;
+   
+}
+
+table th {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-style:solid;
+    border-radius: 4px;
+}
+
+tr {
+    border-bottom: 1px solid black;
+    border-style:solid;
+    
+}
+
+table td {
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-style:solid;
+}
+
+.table table td{
+    width: 300px;
+    padding-top:17px;
+    padding-bottom: 17px;
+    text-align: center;
+    
+}
+
+.table table th{
+   padding: 8px;
+   text-decoration: dashed;
+}
+
+.table .edit{
+    background-color: rgb(233, 173, 32);
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+    font-weight: bold;
+    transition: opacity 0.4s;
+}
+
+
+.table .delete{
+    background-color: rgb(198, 28, 28);
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+    font-weight: bold;
+    transition: opacity 0.4s;
+}
+
+
+.table .delete:hover{
+    
+    opacity: 0.83;
+}
+
+.table .edit:hover{
+    
+    opacity: 0.83;
+}
+
+.guida-form{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    position: relative;
+    top:50px;
+    
+}
+
+.guida-form input{
+    margin-left: 5px;
+    border-radius: 6px;
+    border-color: rgb(202, 192, 192);
+    border-style:ridge;
+    
+}
+
+.guida-form label{
+    margin-right: 8px;
+}
+
+.sub-btn{
+    position: relative;
+    left: 820px;
+    top:60px;
+    padding: 6px;
+    border-radius: 8px;
+    border: rgb(167, 159, 159);
+    cursor: pointer;
+    background-color: rgb(14, 160, 14);
+    color: white;
+}
+
+.sub-btn:hover{
+   opacity: 0.76;
+}
+
+.error-message {
+    color: red;
+    background-color: #ffcccc;
+    padding: 5px;
+    position:relative;
+    top: 420px;
+    left: 740px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    text-wrap: nowrap;
+
+}
+
+form h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, 
+    Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.days .list {
+    display: inline-block;
+    position: relative;
+    top:60px;
+    left: 400px;
+    list-style: none;
+   
+   
+   
+}
+.days ul li a{
+    cursor: pointer;
+   
+}
+
+.days ul li input{
+    background-color: white;
+    border:none;
+    padding: 40px;
+    font-size: 16px;
+  
+    
+}
+
+.days ul li input:hover{
+    text-decoration: underline;
+    
+}

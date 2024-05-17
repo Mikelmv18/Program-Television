@@ -1,0 +1,39 @@
+body{
+   background-color:white;
+  font-family:  Sans Pro,sans-serif;
+}
+.program{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   top:250px;
+}
+
+.program .slide img{
+   
+   width: 300px;
+   border-radius: 7px;
+}
+
+.description p{
+   display: inline-block;
+   width: 400px;
+   color:black;
+}
+
+.program button{
+   margin: 7px;
+   padding-left: 9px;
+   padding-right: 9px;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   border: none;
+}
+
+.program button:active{
+   box-shadow: 3px  rgb(214, 206, 206);
+   opacity: 0.77;
+}
+
+
