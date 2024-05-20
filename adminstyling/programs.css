@@ -1,6 +1,40 @@
-body{
-   background-color:white;
-  font-family:  Sans Pro,sans-serif;
+body {
+   background-color: white;
+   font-family: Sans Pro, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+.navbar {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 1000;
+}
+
+.slider-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin-top: -100px;
+}
+
+.carousel-inner img {
+   width: 800px;
+   height: auto;
+   margin: 0 auto;
+   border-radius: 9px;
+   
+}
+
+.carousel-caption p {
+   color: black;
+}
+
+#homeBanner .carousel {
+   width: 800px;
+   margin: 0 auto;
 }
 .program{
    display: flex;
@@ -35,5 +69,19 @@ body{
    box-shadow: 3px  rgb(214, 206, 206);
    opacity: 0.77;
 }
+
+#homeBanner {
+   position: relative;
+ }
+ #homeBanner .carousel-item img {
+   width: 100%;
+   object-fit: scale-down;
+   position: relative;
+ }
+
+ #homeBanner .carousel-item p{
+   text-align: center;
+   margin-top: 15px;
+ }
 
 

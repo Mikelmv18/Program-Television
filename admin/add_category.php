@@ -2,14 +2,24 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-if(isset($_POST['add'])) { 
+if(isset($_POST['add']) && isset($_POST['category'])) { 
   
   require('../connection/connect.php');
 
-  if(isset($_POST['category'])) {
+  
     
-    
-    $category = trim(mysqli_real_escape_string($conn, $_POST['category']));
+    if(empty($_POST['category'])){
+      require('../admin/categories.php');
+      echo '<span style="position:absolute; top: 320px; right:44%; 
+      color:red; background-color: #ffcccc; padding: 3px 7px; 
+      border-radius: 5px; font-weight:bolder">
+      Do not leave empty fields!</span>';
+
+      
+    }
+    else{
+    $category = trim(mysqli_real_escape_string
+    ($conn, $_POST['category']));
    
     $insertQuery = "INSERT INTO category (type) VALUES (?)";
     $insertStmt = $conn->prepare($insertQuery);
@@ -19,8 +29,9 @@ if(isset($_POST['add'])) {
     $conn->close();
 
     header('location:../admin/categories.php');
+    }
   }
-} else {
+ else {
   echo "Submit the form";
 }
 ?>

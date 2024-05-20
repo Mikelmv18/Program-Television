@@ -68,3 +68,42 @@ ul li:hover ul.dropdown {
 .logout-btn:hover{
     opacity: 0.7;
 }
+
+.delete{
+    text-decoration: none;
+    color:rgb(198, 28, 28);
+    font-weight: bold;
+    transition: opacity 0.4s;
+    margin: 4px;
+}
+
+.edit{
+    text-decoration: none;
+    color: rgb(233, 173, 32);
+    font-weight: bold;
+    transition: opacity 0.4s;
+    margin: 4px;
+}
+
+.add-guida{
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 2px;
+    transition: opacity 0.4s;
+    margin: 4px;
+}
+
+.delete:hover{
+    opacity: 0.83;
+}
+
+.edit:hover{
+    opacity: 0.83;
+}
+
+.add-guida:hover{
+    opacity: 0.83;
+}
+

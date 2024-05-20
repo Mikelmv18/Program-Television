@@ -34,7 +34,8 @@
                 ?>
                 <li>
                     <a href="../admin/news_by_category.php?
-                    category=<?php echo urlencode($category); ?>">
+                    category=<?php echo urlencode($category); ?>"
+                    style="white-space: nowrap;">
                         <?php echo $category; ?>
                     </a>
                  

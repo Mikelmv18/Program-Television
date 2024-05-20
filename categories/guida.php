@@ -12,7 +12,17 @@ if (isset($_POST['day'])) {
 
     $result = mysqli_query($conn, $query);
 
-   
+    if ($result) {
+        if (mysqli_num_rows($result) == 0) {
+            echo '<div style="position:absolute; top:450px; 
+            left:660px; display: flex; 
+            align-items: center;">
+            <h1>No programs available this day</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/61/61088.png" 
+            style="width:70px; margin-left:20px;">
+            </div>';
+        }
+    }
 }
 ?>
 
@@ -20,9 +30,8 @@ if (isset($_POST['day'])) {
 function show_days($day){
     echo '<ul class="list">';
     echo '<li><form action="guida.php" method="POST">';
-    echo '<input type="hidden" name="day" value="' . $day . '">';
-    echo '<input type="submit" name="' . $day . '" value="' . 
-    $day . '">';
+    echo '<input class="day" type="hidden" name="day" value="' . $day . '">';
+    echo '<input type="submit" name="' . $day . '" value="' . $day . '">';
     echo '</form></li>';
     echo '</ul>';
 }
@@ -45,37 +54,35 @@ function show_days($day){
         "Thursday", "Friday", "Saturday", "Sunday");
         
         foreach($days_array as $day){
-           show_days($day);
+            show_days($day);
         }
         ?>
         
-        <div style='display: grid; grid-template-columns: 1fr;
+        <div style='display: grid; grid-template-columns: 1fr; 
         margin-left:700px; margin-top:-140px;'>
-  <?php
-    while ($row = mysqli_fetch_assoc($result)) {
-        ?>
-      <div style="margin-bottom:130px; width:400px">
-        <div style="width:300px; position:relative; top:215px;
-         left:100px;">
-            <img src='<?php echo $row['URL'];?>' 
-            style='width: 100%; border-radius:7px;'>
-        </div>
-       
-       <div style="display: inline-block; position:relative;
-        top:215px; left:100px; width:300px;">
-       <label >Time:</label><span style="margin-right:4px"><?php echo $row['time']?>
-       </span><br><br>
-       <p style=><?php echo
-        $row['description']?></p>
-       </div>
-       
-      
-    </div>
-       
         <?php
-       
-    }
-?>
+        if ($result && mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <div style="margin-bottom:130px; width:400px;">
+                    <div style="width:300px; position:relative; 
+                    top:215px; left:40px;">
+                        <img src='<?php echo $row['URL']; ?>' 
+                        style='width: 400px; border-radius:7px;'>
+                    </div>
+                    
+                    <div style="display: inline-block; position:relative; top:215px; 
+                    left:50px; width:100%;">
+                        <label>Time:</label><span>
+                        <?php echo $row['time']; ?></span><br><br>
+                        <p><?php echo $row['description']; ?></p>
+                    </div>
+                </div>
+                <?php
+            }
+        }
+        ?>
+        </div>
     </div>
 </body>
 </html>

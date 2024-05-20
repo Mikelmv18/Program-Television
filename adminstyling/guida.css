@@ -111,6 +111,7 @@ table td {
     cursor: pointer;
     background-color: rgb(14, 160, 14);
     color: white;
+    
 }
 
 .sub-btn:hover{
@@ -149,22 +150,20 @@ form h2{
     display: inline-block;
     position: relative;
     top:60px;
-    left: 400px;
+    left: 300px;
     list-style: none;
-   
-   
-   
+
 }
+
 .days ul li a{
     cursor: pointer;
-   
 }
 
 .days ul li input{
     background-color: white;
     border:none;
     padding: 40px;
-    font-size: 16px;
+    font-size: 20px;
   
     
 }
@@ -173,3 +172,4 @@ form h2{
     text-decoration: underline;
     
 }
+

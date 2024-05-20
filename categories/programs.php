@@ -5,70 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Image Slider</title>
 <link rel="stylesheet" href="../adminstyling/programs.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+    <?php
+    require('../HomePage/navbar.php');
+    ?>
+
 <div class="slider-container">
-    <div class="slides">
-        
-        <?php
-         require('../HomePage/navbar.php');
-         require_once('../connection/connect.php');
-         $query = mysqli_query($conn, "SELECT URL,description from content");
-         
-         while ($row = mysqli_fetch_assoc($query))
-         
-          {
-            echo '<div class="program">';
-            echo '<div class="slide">';
-            echo "<img src=\"" . $row['URL'] . "\">";
-            echo '<div class="description">' . '<p>' . $row['description'] . '</p>' . '</div>';
-            echo '</div>';
-            echo '</div>';
+    <?php
+    require_once('../connection/connect.php');
+    $query = mysqli_query($conn, "SELECT URL, description FROM content");
+    ?>
 
-         }
-             
-   ?>     
+    <section id="homeBanner">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" width="100%">
+                <?php
+                $firstItem = true;
+                while ($row = mysqli_fetch_assoc($query)) {
+                    $activeClass = $firstItem ? 'active' : '';
+                    $firstItem = false;
+                    echo '<div class="carousel-item ' . $activeClass . '">';
+                    echo '<img src="' . $row['URL'] . '" class="d-block" alt="Image">';
+                    echo '<p>' . $row['description'] . '</p>';
+                    echo '</div>';
+                }
+                ?>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
 </div>
-<div class="program">
-    <button class="prev-btn" onclick="changeSlide(-1)"><</button>
-    <button class="next-btn" onclick="changeSlide(1)">></button>
-</div>
 
-<script>
-
-let slideIndex = 0;
-let slide1Index = 0;
-
-function showSlide(index) {
-    
-    const slides = document.querySelectorAll('.slides img');
-    const slides1 = document.querySelectorAll('.description');
-    
-    if (index >= slides.length && index >= slides1.length) {
-        slideIndex = 0;
-        slide1Index = 0;
-    } else if (index < 0) {
-        slideIndex = slides.length - 1;
-        slide1Index = slides1.length - 1;
-    } else {
-        slideIndex = index;
-        slide1Index = index;
-    }
-    slides.forEach(slide => slide.style.display = 'none');
-    slides[slideIndex].style.display = 'block';
-    slides1.forEach(slide1 => slide1.style.display = 'none');
-    slides1[slide1Index].style.display = 'inline-block';
-    slides1[slide1Index].style.width = '100%';
-}
-
-function changeSlide(n) {
-    showSlide(slideIndex + n);
-    showSlide1(slideIndex1 + n);
-}
-
-showSlide(slideIndex);
-showSlide(slide1Index);
-
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/
+dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
+
