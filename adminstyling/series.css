@@ -1,0 +1,40 @@
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; 
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-inner {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto; 
+}
+
+.carousel-item img {
+    width: 700px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 20px;
+}
