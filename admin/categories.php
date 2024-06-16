@@ -44,13 +44,12 @@ require('../HomePage/navbar.php');
 
 <div class="table-form">
     <form action="add_category.php" method="post">
-        <input type="text" name="category" placeholder="Add category" class="text">
+        <input type="text" name="category" placeholder="Add category" 
+        class="text">
         <input type="submit" name="add" value="Add" class="success">
     </form>
-</div>
-
-<div class="table">
-    <table>
+    <div class="table">
+     <table>
         <tr>
             <th>Category</th>
             <th>Update</th>
@@ -82,5 +81,8 @@ require('../HomePage/navbar.php');
         ?>
     </table>
 </div>
+</div>
+
+
 </body>
 </html>

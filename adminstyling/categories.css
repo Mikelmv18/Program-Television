@@ -6,11 +6,14 @@ body{
 }
 
 .table-form{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  
+    
+    margin-bottom: 30px;
+}
+.table-form form{
     position: relative;
-    top:200px;
+    top:100px;
+    left: 760px;
 }
 
 .table-form input{
@@ -113,3 +116,4 @@ table td:last-child {
     
     opacity: 0.83;
 }
+

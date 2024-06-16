@@ -48,30 +48,25 @@ require('../HomePage/navbar.php');
         <h1>Welcome Admin!</h1>
           
         <input class="url-field" type="text" name="URL"
-            placeholder="Image URL/Address" style="width:290px; border-radius:4px">
-        <select name="URL-type">
-            <option>Image</option>
-            <option>Video</option>
-        </select>
-        <br><br>
+            placeholder="Image URL/Address" style="width:290px; 
+            border-radius:4px" required>
+        
 
-            <div class="schedule">
-    
-  
-    <br>
-
-  
- 
-</div>
+         <div class="schedule"><br>
+        
+        </div> 
+        
+     <label>Title</label>
+     <input type="text" name="title" style="width:500px; height:100px" required><br><br>
 
         <label>Description</label><br>
-        <textarea rows="25" cols="55"
-                    name="description" class="fields"
-                    style="margin-bottom:20px;overflow:scroll">
-        </textarea>
-        <br>
+        <textarea rows="25" cols="55" name="description" 
+        class="fields" style="margin-bottom:20px;overflow:scroll" required>
+        </textarea><br>
+
+        
         <select name="category_id" style="width: 150px; border-radius: 10px;
-    margin-bottom: 20px; height: 30px">
+         margin-bottom: 20px; height: 30px">
 
             <?php
 
@@ -84,7 +79,8 @@ require('../HomePage/navbar.php');
             ?>
         </select><br>
         <input type="submit" name="sub" value='Submit'
-                style="padding:4px;border-radius:6px; border-color: rgb(204, 197, 197);">
+                style="padding:4px;border-radius:6px; 
+                border-color: rgb(204, 197, 197);">
     </form>
     </div>
 </div>

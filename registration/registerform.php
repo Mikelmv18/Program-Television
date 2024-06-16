@@ -24,16 +24,20 @@ background-color: #0e2941;">
         <h2><i class="fas fa-lock"></i> Register</h2>
         
         <div class="fields">
-            <input type="text" placeholder="Full Name *"><br>
+            <input type="text" name="full-name" placeholder="Full Name *"
+            required><br>
         </div>
 
          <div class="fields">
-            <input type="text" name="username" placeholder="Username *"/><br>
+            <input type="text" name="username" placeholder="Username *" 
+            required/><br>
             
         </div>
 
          <div class="fields">
-         <input type="text" id="email" placeholder="Email *"/>
+         <input type="text" id="email" name= "em" 
+         placeholder="Email *"
+         required/>
          <span id="emailError" style="color: red;
             display: inline-block;
             width: 200px;
@@ -41,15 +45,22 @@ background-color: #0e2941;">
             
          </div>
 
+        
          <div class="fields">
-            <input type="password" name="password" placeholder="Password *"/><br>
+            <input type="password" name="password" id="password" 
+            placeholder="Password *" required/>
+            <span id="passwordError" style="color: red; display: 
+            inline-block;
+            width:200px"></span><br>
+
          </div>
         
         <div class="fields">
             <input type="submit" name="sub" value="Register">
         </div>
        
-        <p class="message">Already registered? <a href="form.php">Sign In</a></p>
+        <p class="message">Already registered? <a href="form.php">
+            Sign In</a></p>
         
         </form>
     </div>
@@ -71,6 +82,23 @@ background-color: #0e2941;">
         }
     });
 </script>
+
+
+<script>
+    document.querySelector('.register-form').addEventListener('submit', function(event) {
+        const passwordInput = document.getElementById('password');
+        const passwordError = document.getElementById('passwordError');
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+
+        if (!passwordPattern.test(passwordInput.value)) {
+            passwordError.textContent = 
+            'Password should contain at least 8 characters, and include a, A, @, ! ...';
+            event.preventDefault(); // Prevent form submission
+        } else {
+            passwordError.textContent = ''; // Clear error message
+        }
+    });
+  </script>
 
 
 </body>

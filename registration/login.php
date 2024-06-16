@@ -10,6 +10,7 @@ if(isset($_SESSION['username'])){
 $username = htmlspecialchars($_POST["username"]);
 $password = htmlspecialchars($_POST["password"]);
 
+
 require('../connection/connect.php');
 
 $query = "SELECT * FROM user WHERE username=? and password=?";
@@ -23,6 +24,7 @@ $stmt->store_result();
 
 if ($stmt->num_rows != 0) {
     $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
     header('Location: ../HomePage/home.php');
 }
 
@@ -60,8 +62,8 @@ else{
     }
  
     
-    
 }
+
 
 
 $conn->close();

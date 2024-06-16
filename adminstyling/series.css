@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh; 
+    height: 90vh;
 }
 
 .carousel-item {
@@ -10,15 +10,16 @@
 }
 
 .carousel-inner {
-    width: 700px;
-    max-width: 100%;
-    margin: 0 auto; 
+    width: 90%; /* Increase width */
+    max-width: 700px; /* Set a maximum width */
+    margin: 0 auto;
 }
 
 .carousel-item img {
-    width: 700px;
+    width: 100%;
     height: auto;
-    object-fit: cover;
+    max-height: 600px;
+
     border-radius: 15px;
 }
 
@@ -37,4 +38,7 @@
 .description {
     margin-top: 10px;
     font-size: 20px;
+    max-width: 90%;
+    margin: 10px auto;
+    text-align: center;
 }

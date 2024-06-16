@@ -18,7 +18,7 @@
     <?php
     require_once('../connection/connect.php');
 
-    $query = mysqli_query($conn, "SELECT content.URL, 
+    $query = mysqli_query($conn, "SELECT content.URL, content.title,
     content.description FROM content JOIN category ON content.category_id = category.id 
     WHERE category.type = 'TV Shows'");
     ?>
@@ -33,6 +33,8 @@
                     $firstItem = false;
                     echo '<div class="carousel-item ' . $activeClass . '">';
                     echo '<img src="' . $row['URL'] . '" class="d-block" alt="Image">';
+                    echo '<div style="font-family:Arial Black;
+                    font-size:34px" >'. $row['title'] . '</div>';
                     echo '<div class="description">' . $row['description'] . '</div>';
                     echo '</div>';
                 }

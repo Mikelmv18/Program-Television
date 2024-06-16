@@ -7,15 +7,54 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
+}
 
+.URL-edit label{
+    margin-left:10px;
+    font-size:14px;
+    font-family:Arial;
+    font-weight:bold;
+}
+
+.descr-edit label{
+    margin-left:10px;
+    font-size:14px;
+    font-family:Arial;
+    font-weight:bold;
+}
+
+.category-edit label{
+    margin-left:10px;
+    font-size:14px;
+    font-family:Arial;
+    font-weight:bold;
+}
+
+.title-edit label{
+    margin-left:10px;
+    font-size:14px;
+    font-family:Arial;
+    font-weight:bold;
+}
+
+.font-edit label{
+    margin-left:10px;
+    font-size:14px;
+    font-family:Arial;
+    font-weight:bold;
+}
+
+.dropdown-edit{
+    position: absolute;
+    top:200px;
+    left:400px;
 }
 
 .edit-form form{
     position: relative;
     background: white;
-    height: 70vh;
-    width: 600px;
+    height: 85vh;
+    width: 650px;
     border-radius: 15px;
    
 }
@@ -28,7 +67,7 @@ body{
 .sub-btn{
     position: absolute;
     left: 280px;
-    margin-top: -7px;
+    top:770px;
     border-radius: 7px;
     padding: 7px;
     border-color: white;
